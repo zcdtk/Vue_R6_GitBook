@@ -19,14 +19,16 @@
 - 访问 [Yarn](https://yarnpkg.com) ，根据文档安装 `Yarn`。
 - 访问 [Vue Cli (3.0)](https://cli.vuejs.org/) ，根据文档安装 `Vue Cli (3.0)`。
 
-> 在安装 `Vue Cli (3.0)` ,请使用 `Yarn` 模式全局安装。
+<blockquote style="border-color: red;"><p>在安装 Vue Cli (3.0) ,请使用 Yarn 模式全局安装。</p></blockquote>
 
 ```bash
 $ yarn global add @vue/cli
 ```
 
-以下为正常开发所需环境 <br>
-<img style="display: block; border-radius: 4px; box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.2);" src="https://github.com/zcdtk/Vue_R6_GitBook/blob/master/imgs/getting-started/development.png">
+以下为正常开发所需环境 
+<br>
+<br>
+![开发环境信息](/imgs/getting-started/development.png)
 
 #### 2. 安装依赖
 
