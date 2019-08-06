@@ -1,7 +1,7 @@
 # Summary
 
 * [前言](README.md)
-* [快速上手](docs/introduction.md)
+* [快速上手](docs/getting-started/getting-started.md)
 * [技术体系](docs/technology-system/technology-system.md)
     * [模板](docs/technology-system/template.md)
     * [成果](docs/technology-system/result.md)
