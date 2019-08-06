@@ -26,7 +26,7 @@ $ yarn global add @vue/cli
 ```
 
 以下为正常开发所需环境 <br>
-<img style="display: block; border-radius: 4px; box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.2);" src="https://img.alicdn.com/tfs/TB19fFHdkxz61VjSZFtXXaDSVXa-680-243.svg">
+<img style="display: block; border-radius: 4px; box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.2);" src="https://github.com/zcdtk/Vue_R6_GitBook/blob/master/imgs/getting-started/development.png">
 
 #### 2. 安装依赖
 
