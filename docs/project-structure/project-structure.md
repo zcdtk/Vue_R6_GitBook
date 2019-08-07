@@ -12,57 +12,57 @@
 │... ├── assets | 静态资源目录（不参与编译）
 │... ├── favicon.ico | 应用图标
 │... └── index.html | 应用入口
-├── src | 核心目录
-│... ├── assets | 资源目录（参与编译）
-│... │... └── img | 目录目录
+├── src | 核心
+│... ├── assets | 资源（参与编译）
+│... │... └── img | 图片
 │... │......... └── `******`.png | `******` 图片
-│... ├── components | 组件目录
-│... │... └── `******` | 功能组件目录
+│... ├── components | 组件
+│... │... └── `******` | 功能组件 `******`
 │... │......... ├── `******`.less | 组件样式
 │... │......... └── `******`.tsx | 组件（逻辑与内容）
-│... ├── engine | 引擎目录
+│... ├── engine | 引擎
 │... │... └── view | 视图引擎
 │... │......... └── `******`-engine.ts | `******` 视图引擎
-│... ├── environments | 应用级文件目录
+│... ├── environments | 应用级文件
 │... │... └── environment.ts | 环境变量文件
-│... ├── interface | 接口目录
+│... ├── interface | 应用接口
 │... │... ├── control.ts | 部件接口
 │... │... └── viewState.ts | 视图状态接口
-│... ├── locale | 语言资源目录
-│... │... ├── lang | 预置语言资源目录
+│... ├── locale | 语言资源
+│... │... ├── lang | 预置语言资源
 │... │... │... ├── en-US.ts | 英文语言资源
 │... │... │... └── zh-CN.ts | 中文语言资源
-│... │... ├── lanres | 动态语言资源牡蛎
+│... │... ├── lanres | 动态语言资源
 │... │... │... └── `******` | `******` 实体语言资源
 │... │... │......... ├── `******`_en_US.ts | `******` 实体英文语言资源
 │... │... │......... └── `******`_zh_CN.ts | `******` 实体中文语言资源
 │... │... ├── index.ts | 语言资源导出声明文件
 │... │... └── local-list.ts | 本地被引用语言资源列表
-│... ├── model | 模型目录
-│... │... └── form-detail | 表单成员模型目录 
-│... │......... ├── form-button.ts | 按钮成员模型
-│... │......... ├── form-detail.ts | 表单成员模型
-│... │......... ├── form-druipart.ts | 关系项成员模型
-│... │......... ├── form-group-panel.ts | 分组面板成员模型
-│... │......... ├── form-iframe.ts | 嵌入成员模型
-│... │......... ├── form-item.ts | 表单项模型
-│... │......... ├── form-page.ts | 分页成员模型
-│... │......... ├── form-part.ts | 部件成员模型
-│... │......... ├── form-row-item.ts | 直接内容成员模型
-│... │......... ├── form-tab-page.ts | 分页面板成员模型
-│... │......... ├── form-tab-panel.ts | 分页部件成员模型
-│... │......... ├── form-user-control.ts | 用户看见成员模型
+│... ├── model | 模型
+│... │... └── form-detail | 表单成员模型
+│... │......... ├── form-button.ts | 按钮
+│... │......... ├── form-detail.ts | 表单成员
+│... │......... ├── form-druipart.ts | 关系项
+│... │......... ├── form-group-panel.ts | 分组面板
+│... │......... ├── form-iframe.ts | 嵌入内容
+│... │......... ├── form-item.ts | 表单项
+│... │......... ├── form-page.ts | 分页
+│... │......... ├── form-part.ts | 部件
+│... │......... ├── form-row-item.ts | 直接内容
+│... │......... ├── form-tab-page.ts | 分页面板
+│... │......... ├── form-tab-panel.ts | 分页部件
+│... │......... ├── form-user-control.ts | 用户控件
 │... │......... └── index.ts | 表单成员模型导出声明文件
-│... ├── pages | 
-│... │... └── common | 
-│... │......... └── test-entity-grid-view | 
-│... │............... ├── test-entity-grid-view.less | 
-│... │............... └── test-entity-grid-view.tsx | 
-│... ├── store | 
-│... │... ├── api | 
-│... │... │... └── api.ts | 
-│... │... ├── modules | 
-│... │... │... └── view-action | 
+│... ├── pages | 视图
+│... │... └── `******` |  应用模块 `******`
+│... │......... └── `******`-view | `******` 视图
+│... │............... ├── `*******`-view.less | `*******` 视图样式
+│... │............... └── `*******`-view.tsx | `*******` 视图（逻辑与内容）
+│... ├── store | 状态管理器
+│... │... ├── api | 接口
+│... │... │... └── api.ts | 接口内容
+│... │... ├── modules | 模块
+│... │... │... └── view-action | 视图行为模块
 │... │... │......... ├── actions.ts | 
 │... │... │......... ├── getters.ts | 
 │... │... │......... ├── index.ts | 
@@ -73,79 +73,77 @@
 │... │... ├── index.ts | 
 │... │... ├── mutations.ts | 
 │... │... └── state.ts | 
-│... ├── styles | 
-│... │... ├── default.less | 
-│... │... ├── user.less | 
-│... │... └── var.css | 
-│... ├── theme | 
-│... │... ├── blue.theme.less | 
-│... │... ├── dark-blue.theme.less | 
-│... │... └── default.theme.less | 
-│... ├── utils | 
-│... │... ├── app-drawer | 
-│... │... │... ├── app-drawer.less | 
-│... │... │... └── app-drawer.tsx | 
-│... │... ├── app-modal | 
-│... │... │... ├── app-modal.less | 
-│... │... │... └── app-modal.tsx | 
-│... │... ├── app-popover | 
-│... │... │... ├── app-popover.less | 
-│... │... │... └── app-popover.tsx | 
-│... │... ├── auth-guard | 
-│... │... │... └── auth-guard.ts | 
-│... │... ├── code-list | 
-│... │... │... └── code-list.tsx | 
-│... │... ├── dom | 
-│... │... │... └── dom.ts | 
-│... │... ├── http | 
-│... │... │... └── http.ts | 
-│... │... ├── interceptor | 
-│... │... │... └── interceptor.ts | 
-│... │... ├── json-http | 
-│... │... │... └── json-http.ts | 
-│... │... ├── jsonp | 
-│... │... │... └── jsonp.ts | 
-│... │... ├── types | 
-│... │... │... ├── app-drawer.d.ts | 
-│... │... │... ├── app-modal.d.ts | 
-│... │... │... ├── app-popover.d.ts | 
-│... │... │... ├── code-list.d.ts | 
-│... │... │... ├── http.d.ts | 
-│... │... │... ├── other.d.ts | 
-│... │... │... ├── README.md | 
-│... │... │... ├── tab-page-exp.d.ts | 
-│... │... │... ├── util.d.ts | 
-│... │... │... └── utils.d.ts | 
-│... │... ├── ui-conunter | 
-│... │... │... └── ui-counter.ts | 
-│... │... ├── util | 
-│... │... │... └── util.ts | 
-│... │... ├── xml-writer | 
-│... │... │... └── xml-writer.ts | 
-│... │... └── index.ts | 
-│... ├── widget | 
-│... │... ├── app | 
-│... │... │... └── dev-appmenu | 
-│... │... │......... ├── dev-appmenu.less | 
-│... │... │......... └── dev-appmenu.tsx | 
-│... │... └── test-entity | 
-│... │......... ├── main-form | 
-│... │......... │... ├── main-form-data.ts | 
-│... │......... │... ├── main-form.less | 
-│... │......... │... └── main-form.tsx | 
-│... │......... └── main-grid | 
-│... │............... ├── main-grid.less | 
-│... │............... └── main-grid.tsx | 
-│... ├── app-register.ts | 
-│... ├── App.tsx | 
-│... ├── index.d.ts | 
-│... ├── main.ts | 
-│... ├── page-register.ts | 
-│... ├── router.ts | 
+│... ├── styles | 应用样式
+│... │... ├── default.less | 应用默认样式
+│... │... ├── user.less | 应用自定义样式
+│... │... └── var.css | 应用样式色系定义
+│... ├── theme | 主题样式
+│... │... ├── blue.theme.less | 蓝色主题样式
+│... │... ├── dark-blue.theme.less | 暗黑主题样式
+│... │... └── default.theme.less | 默认主题样式
+│... ├── utils | 工具类
+│... │... ├── app-drawer | 抽屉
+│... │... │... ├── app-drawer.less | 抽屉样式
+│... │... │... └── app-drawer.tsx | 抽屉（内容与逻辑）
+│... │... ├── app-modal | 模态
+│... │... │... ├── app-modal.less | 模态样式
+│... │... │... └── app-modal.tsx | 模态（内容与逻辑）
+│... │... ├── app-popover | 气泡卡片
+│... │... │... ├── app-popover.less | 气泡卡片样式
+│... │... │... └── app-popover.tsx | 气泡卡片（逻辑与内容）
+│... │... ├── auth-guard | 应用路由守卫
+│... │... │... └── auth-guard.ts | 应用路由守卫
+│... │... ├── code-list | 代码表
+│... │... │... └── code-list.tsx | 代码表绘制
+│... │... ├── dom | dom 节点处理
+│... │... │... └── dom.ts | dom 节点处理对象
+│... │... ├── http | http 客户端
+│... │... │... └── http.ts | http 客户端对象
+│... │... ├── interceptor | 拦截器
+│... │... │... └── interceptor.ts | 拦截器对象
+│... │... ├── json-http | json-http 客户端
+│... │... │... └── json-http.ts | json-http 客户端对象
+│... │... ├── jsonp | jsonp 客户端
+│... │... │... └── jsonp.ts | jsonp 客户端对象
+│... │... ├── types | 工具类接口定义文件
+│... │... │... ├── app-drawer.d.ts | 抽屉
+│... │... │... ├── app-modal.d.ts | 模态
+│... │... │... ├── app-popover.d.ts | 气泡卡片
+│... │... │... ├── code-list.d.ts | 代码表
+│... │... │... ├── http.d.ts | http 客户端
+│... │... │... ├── other.d.ts | 其他
+│... │... │... ├── README.md | 说明
+│... │... │... ├── tab-page-exp.d.ts | 根导航分页标签
+│... │... │... └── util.d.ts | 工具类
+│... │... ├── ui-conunter | 计数器
+│... │... │... └── ui-counter.ts | 计数器对象 
+│... │... ├── util | 工具类
+│... │... │... └── util.ts | 工具类对象
+│... │... ├── xml-writer | xml 处理
+│... │... │... └── xml-writer.ts |  xml 处理对象
+│... │... └── index.ts | 工具类导出对象
+│... ├── widget | 部件
+│... │... ├── app | 应用部件
+│... │... │... └── `******` | `******` 部件
+│... │... │......... ├── `******`.less | `******` 部件样式
+│... │... │......... └── `******`.tsx | `******` 部件（逻辑与内容）
+│... │... └── `******` | `******`实体
+│... │......... ├── `******`-form | `******` 表单
+│... │......... │... ├── `******`-form.less | `******` 表单样式
+│... │......... │... └── `******`-form.tsx | `******` 表单（逻辑与内容）
+│... │......... └── `******`-grid | `******` 表格
+│... │............... ├── `******`-grid.less | `******` 表格样式
+│... │............... └── `******`-grid.tsx | `******` 表格（逻辑与内容）
+│... ├── app-register.ts | 应用级组件全局注册
+│... ├── App.tsx | 应用根组件
+│... ├── index.d.ts | 应用接口定义
+│... ├── main.ts | 应用主函数入口
+│... ├── page-register.ts |  应用视图全局注册
+│... ├── router.ts | 应用路由
 │... ├── shims-tsx.d.ts | 
 │... ├── shims-vue.d.ts | 
-│... └── user-register.ts | 
-├── tests | 
+│... └── user-register.ts | 用户组件自定义注册
+├── tests | 测试文件
 │... ├── e2e | 
 │... │... ├── plugins | 
 │... │... │... └── index.js | 
@@ -156,17 +154,16 @@
 │... │......... └── index.js | 
 │... └── unit | 
 │......... └── example.spec.ts | 
-├── .browserslistrc | 
-├── .gitignore | 
-├── babel.config.js | 
-├── CHANGELOG.zh-CN.md | 
+├── .browserslistrc | 浏览器支持配置
+├── .gitignore | 忽略应用提交
+├── babel.config.js | vue cli babel 编译配置
+├── CHANGELOG.zh-CN.md | 更新日志
 ├── cypress.json | 
 ├── jest.config.js | 
-├── package-lock.json | 
-├── package.json | 
-├── postcss.config.js | 
-├── Readme.zh-CN.md | 
-├── tsconfig.json | 
-├── tslint.json | 
-├── vue.config.js | 
-└── yarn.lock | 
+├── package.json | 应用依赖包管理
+├── postcss.config.js |  vue cli css 加载处理
+├── Readme.zh-CN.md |  应用介绍说明
+├── tsconfig.json | TypeScript 编译说明
+├── tslint.json | TypeScript 格式校验
+├── vue.config.js | vue cli 配置
+└── yarn.lock | 应用依赖包版本锁定
