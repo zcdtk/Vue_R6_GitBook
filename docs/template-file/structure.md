@@ -22,7 +22,7 @@
 路径 | 说明 
 ------------ | ------------- 
 [VUE_R6_FTL](http://172.16.180.229/wangxiang1/VUE_R6_FTL) | 模板文件项目名称
-├── @CONTROL | 部件 （类别文件 - 不直接输出）
+├── [@CONTROL](control.html) | 部件 （类别文件 - 不直接输出）
 │...├── @MACRO | 宏文件
 │...│...├── CONTROL | 逻辑与内容
 │...│...│...├── CONTROL_BOTTOM.tsx.ftl | 部件内容尾部
@@ -59,7 +59,7 @@
 │...... │...├── template.properties | 视图标识
 │...... │...├── VIEW.less.ftl | 视图样式
 │...... │...└── VIEW.tsx.ftl | 视图绘制（render）内容
-├── @EDITOR | 编辑器 （类别文件 - 不直接输出）
+├── [@EDITOR](editor.html) | 编辑器 （类别文件 - 不直接输出）
 │...├── @MACRO | 宏文件 
 │...│...├── GRID | 行编辑编辑器
 │...│...│...└── DEFAULT.tsx.ftl | 默认编辑器
@@ -71,7 +71,7 @@
 │...... ├── GRIDEIDTOR.tsx.ftl | 行编辑内容
 │...... ├── PANELEDITOR.tsx.ftl | 面板编辑内容
 │...... └── template.properties | 编辑器标识
-├── @LOGIC | 逻辑 （类别文件 - 不直接输出）
+├── [@LOGIC](logic.html) | 逻辑 （类别文件 - 不直接输出）
 │...├── @APPFUNC | 应用功能
 │...│...├── ***<应用功能名称>*** | 应用功能名称
 │...│...│...├── LOGIC.tsx.ftl |  应用功能逻辑
@@ -97,7 +97,7 @@
 │...... └── 部件事件 | 部件事件
 │.........  ├── LOGIC.tsx.ftl | 事件逻辑
 │.........  └── template.properties | 事件标识
-├── @VIEW | 视图 （类别文件 - 不直接输出）
+├── [@VIEW](view.html) | 视图 （类别文件 - 不直接输出）
 │...├── @MACRO | 宏文件 （视图逻辑）
 │...│...├── DATAVIEW_VIEW.tsx.ftl | 数据视图
 │...│...├── EDIT_VIEW3.tsx.ftl | 分页编辑视图
