@@ -10,7 +10,13 @@
 
 解决方案通过 `FreeMarker` 引擎构建发布 IBizSys 业务模型成果文件，为开发人员提供良好开发体验。
 
-<blockquote style="border-color: red;"><p><strong>如果你刚开始学习前端，直接进入开发作为你的第一步可能不是最好的主意 —— 掌握好基础知识再来吧！</strong></p></blockquote>
+<blockquote style="border-color: red;">
+    <p>
+        <strong>
+            如果你刚开始学习前端，直接进入开发作为你的第一步可能不是最好的主意 —— 掌握好基础知识再来吧！
+        </strong>
+    </p>
+</blockquote>
 
 
 ### 本地示例
