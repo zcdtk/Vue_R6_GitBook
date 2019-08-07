@@ -1,8 +1,5 @@
 ## 结构
 
-<blockquote style="border-color: red;"><p><strong> ****** 代表名称</strong></p></blockquote>
-本文只选取部分结构做说明。<br>
-
 
 可变字段说明（均在iBizSys6平台进行配置）：
 
