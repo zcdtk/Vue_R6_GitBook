@@ -410,6 +410,7 @@ if (_this.${nextPSUIAction.getFullCodeName()} && _this.${nextPSUIAction.getFullC
 </#if>
 ```
 
+
 #### 前台调用逻辑标识
 
 ```freemarker
@@ -418,4 +419,7 @@ LOGICTYPE=FRONT
 
 `LOGICTYPE` 是逻辑类型，`FRONT` 是逻辑标识名称，属于 IBizSys 模型预置。
 
+
 ### 构成内容
+
+解析业务逻辑通过 `FreeMarker` 引擎发布业务逻辑内容
