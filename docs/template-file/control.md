@@ -140,7 +140,7 @@
 
 <blockquote style="border-color: #2892ec;background-color: #f0faff;">
     <p>
-        其中默认内容使用 <!---  内容区  ---> 替换掉。
+        其中默认内容使用 ---  内容区  --- 替换掉。
     </p>
 </blockquote>
 
@@ -148,7 +148,7 @@
 <#if render_block??>
 ${render_block}
 <#else>
-    <!---  内容区  --->
+    ---  内容区  ---
 </#if>
 ```
 
