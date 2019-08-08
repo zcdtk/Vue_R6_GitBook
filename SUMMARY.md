@@ -14,6 +14,6 @@
     * [视图](docs/template-file/view.md)
 * [基础文件](docs/basic-file/basic-file.md)
 * [开发说明](docs/development-notes/development-notes.md)
-    * [本地化模板](docs/development-notes/local-template.md)
-    * [本地化基础文件](docs/development-notes/local-base-file.md)
+    * [独立维护模板](docs/development-notes/local-template.md)
+    * [独立维护基础文件](docs/development-notes/local-base-file.md)
 
