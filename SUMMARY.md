@@ -15,6 +15,5 @@
 * [基础文件](docs/basic-file/basic-file.md)
 * [开发说明](docs/development-notes/development-notes.md)
     * [本地化模板](docs/development-notes/local-template.md)
-    * [本地化成果](docs/development-notes/local-result.md)
-    * [模板扩展插件化](docs/development-notes/plugin-template.md)
+    * [本地化基础文件](docs/development-notes/local-base-file.md)
 
