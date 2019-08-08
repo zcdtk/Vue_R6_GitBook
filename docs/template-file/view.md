@@ -430,3 +430,5 @@ VIEWTYPE=APPDEGRIDVIEW
 `VIEWTYPE` 是视图类型，`APPDEGRIDVIEW` 是视图标识名称，属于 IBizSys 模型预置。
 
 ### 构成内容
+
+后续更新
