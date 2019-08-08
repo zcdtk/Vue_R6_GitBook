@@ -140,7 +140,7 @@
 
 <blockquote style="border-color: #2892ec;background-color: #f0faff;">
     <p>
-        其中内默认内容使用 <!---  内容区  ---> 替换掉。
+        其中默认内容使用 <!---  内容区  ---> 替换掉。
     </p>
 </blockquote>
 
@@ -153,13 +153,13 @@ ${render_block}
 ```
 
 `render_block` 是部件内容扩展，用于绘制内容。<br>
-发开人员使用部件扩展时，只需要在扩展的部件内定义如下，即可完成的替换默认内容
+发开人员使用部件扩展时，只需要在扩展的部件内定义如下，即可完成的替换默认内容。
 
 ```freemarker
 <#assign render_block>
 public render() {
     return (
-        <div>这是内容</div>
+        <div>这是扩展内容</div>
     );
 }
 </#assign>
@@ -170,6 +170,7 @@ public render() {
 
 ```
 
+完整的扩展，还有很多其他的内容支持，此处只做 `front_block` 简单说明。
 
 #### 部件成员
 
