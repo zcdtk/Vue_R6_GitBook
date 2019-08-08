@@ -1,7 +1,7 @@
 ## 项目结构
 
 
-可变字段说明（均在iBizSys6平台进行配置）：
+可变字段说明（均在 iBizSys6 平台进行配置）：
 
 - ***<部件标识>***: IBizSys 模型预置，如 `GRID`、`FORM` 等。
 - ***<视图引擎代码名称>***: IBizSys 模型预置，如 `EditView`、`GridView` 等。
