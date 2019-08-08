@@ -13,7 +13,6 @@
     * [逻辑](docs/template-file/logic.md)
     * [视图](docs/template-file/view.md)
 * [基础文件](docs/basic-file/basic-file.md)
-    * [结构](docs/basic-file/structure.md)
 * [开发说明](docs/development-notes/development-notes.md)
     * [本地化模板](docs/development-notes/local-template.md)
     * [本地化成果](docs/development-notes/local-result.md)
