@@ -1,6 +1,18 @@
 ## 视图
 
 
+* [构成单位](#构成单位)
+    * [视图（逻辑与内容）](#视图（逻辑与内容）)
+        * [视图逻辑](#视图逻辑)
+        * [视图内容](#视图内容)
+            * [视图绘制内容](#视图绘制内容)
+            * [视图绘制样式](#视图绘制样式)
+            * [视图绘制标识](#视图绘制标识)
+    * [视图样式](#视图样式)
+    * [视图标识](#视图标识)
+* [构成内容](#构成内容)
+
+
 视图是业务模型内容的最大承载节点，它包含了部件、逻辑等。
 
 其中，视图内容逻辑在模板结构中是分离的。
@@ -155,6 +167,197 @@
 ##### 视图内容
 
 [视图内容](http://172.16.180.229/wangxiang1/VUE_R6_FTL/tree/master/@CONTROL/%E8%A7%86%E5%9B%BE%E5%B8%83%E5%B1%80%E9%9D%A2%E6%9D%BF)主要在部件的视图布局面板中，该面板包含所有的视图布局。
+
+`LAYOUTPANEL_VIEW.tsx.ftl` 输出视图内容，代码如下：
+```freemarker
+<#--  视图内容绘制  -->
+<#if view.getPSViewMsgGroup()??>
+<#assign viewMsgGroup = view.getPSViewMsgGroup()/>
+
+    /**
+     * 绘制视图消息 （上方）
+     *
+     * @returns
+     * @memberof ${srfclassname('${view.name}')}
+     */
+    public renderPosTopMsgs() {
+        return (
+            <div class='view-top-messages'>
+                <#list viewMsgGroup.getPSViewMsgGroupDetails() as detail>
+                <#assign msg = detail.getPSViewMsg()>
+                <#--  暂时支持静态  -->
+                <#if msg.getCodeName() != '' && msg.getPosition() == 'TOP' && msg.getDynamicMode() == 0>
+                {this.render${msg.getCodeName()}()}
+                </#if>
+                </#list>
+            </div>
+        );
+    }
+
+    /**
+     * 绘制视图消息 （下方）
+     *
+     * @returns
+     * @memberof ${srfclassname('${view.name}')}
+     */
+    public renderPosBottomMsgs() {
+        return (
+            <div class='view-bottom-messages'>
+                <#list viewMsgGroup.getPSViewMsgGroupDetails() as detail>
+                <#assign msg = detail.getPSViewMsg()>
+                <#--  暂时支持静态  -->
+                <#if msg.getCodeName() != '' && msg.getPosition() == 'BOTTOM' && msg.getDynamicMode() == 0>
+                {this.render${msg.getCodeName()}()}
+                </#if>
+                </#list>
+            </div>
+        );
+    }
+
+<#list viewMsgGroup.getPSViewMsgGroupDetails() as detail>
+<#assign msg = detail.getPSViewMsg()>
+<#--  暂时支持静态  -->
+<#if msg.getCodeName() != '' && msg.getDynamicMode() == 0>
+<#assign type = msg.getMessageType() />
+
+    /**
+     * ${msg.getName()}
+     *
+     * @returns
+     * @memberof ${srfclassname('${view.name}')}
+     */
+    public render${msg.getCodeName()}() {
+        return (
+            <alert type='<#if type == 'INFO'>info<#elseif type == 'WARN'>warning<#elseif type == 'ERROR'>error<#else>info</#if>' closable={${msg.isEnableRemove()?c}}>
+                ${msg.getTitle()}
+                <span slot='desc'>${msg.getMessage()}</span>
+            </alert>
+        );
+    }
+</#if>
+</#list>
+<#else>
+
+    /**
+     * 绘制视图消息 （上方）
+     *
+     * @returns
+     * @memberof ${srfclassname('${view.name}')}
+     */
+    public renderPosTopMsgs() {
+        return (
+            <div class='view-top-messages'>
+            </div>
+        );
+    }
+
+    /**
+     * 绘制视图消息 （下方）
+     *
+     * @returns
+     * @memberof ${srfclassname('${view.name}')}
+     */
+    public renderPosBottomMsgs() {
+        return (
+            <div class='view-bottom-messages'>
+            </div>
+        );
+    }
+</#if>
+    
+    /**
+     * 绘制内容
+     *
+     * @param {CreateElement} h
+     * @returns
+     * @memberof ${srfclassname('${view.name}')}
+     */
+    public render(h: CreateElement) {
+        return (
+<@ibizindent blank=8>
+${P.getLayoutCode().code}
+</@ibizindent>
+        );
+    }
+```
+
+该部分包括视图消息与绘制内容，此处主要介绍绘制内容，以[实体表格视图](http://172.16.180.229/wangxiang1/VUE_R6_FTL/tree/master/@CONTROL/%E8%A7%86%E5%9B%BE%E5%B8%83%E5%B1%80%E9%9D%A2%E6%9D%BF/%E5%AE%9E%E4%BD%93%E8%A1%A8%E6%A0%BC%E8%A7%86%E5%9B%BE)为例。
+
+
+视图内容成员主要包括：
+- 视图绘制内容 template.properties
+- 视图绘制样式 VIEW.less.ftl
+- 视图绘制标识 VIEW.tsx.ftl
+
+
+###### 视图绘制内容
+
+表格视图绘制内容如下：
+```freemarker
+<#ibizinclude>
+../@MACRO/GRID.tsx.ftl
+</#ibizinclude>
+```
+
+`GRID.tsx.ftl` 宏文件内容：
+```freemarker
+<div class='view-container ${srffilepath2(view.getCodeName())}<#if view.getPSSysCss?? && view.getPSSysCss()??> ${view.getPSSysCss().getCssName()}</#if>'>
+    <card class='view-card<#if !view.isShowCaptionBar()> view-no-caption</#if>'  dis-hover={true} bordered={false}>
+
+    <#ibizinclude>
+    ./VIEW_CAPTION.tsx.ftl
+    </#ibizinclude>
+
+
+        <div class='content-container'>
+            {this.renderPosTopMsgs()}
+<#assign MDContent>
+<#comment><!--开始：快速搜索或工具栏存在--></#comment>
+<#if (view.isEnableQuickSearch() || view.hasPSControl('toolbar'))>
+<row style='margin-bottom: 6px;'>
+    <#if view.isEnableQuickSearch()>
+    <i-input<#if view.hasPSControl('searchform')><#if view.isExpandSearchForm??> v-show={!this.isExpandSearchForm}</#if></#if> v-model={this.query} search enter-button on-on-search={($event: any) => this.onSearch($event)} class='pull-left' style='max-width: 400px;margin-top:6px;' />
+    </#if>
+    <div class='pull-right'>
+<@ibizindent blank=8>
+<#if view.hasPSControl('toolbar')>
+${P.getCtrlCode('toolbar', 'CONTROL.html').code}
+</#if>
+</@ibizindent>
+    </div>
+</row>
+</#if>
+<#comment><!--结束：快速搜索或工具栏存在--></#comment>
+<#if view.hasPSControl('searchform')>
+${P.getCtrlCode('searchform', 'CONTROL.html').code}
+</#if>
+<#if view.hasPSControl('grid')>
+${P.getCtrlCode('grid', 'CONTROL.html').code}
+</#if>
+</#assign>
+
+<#ibizinclude>
+./VIEW_MD_CONTENT.tsx.ftl
+</#ibizinclude>
+            {this.renderPosBottomMsgs()}
+        </div>
+    </card>
+</div>
+```
+
+
+###### 视图绘制样式
+
+视图绘制样式丰富了的视图内容组成，了解更多查看[视图样式](#视图样式)
+
+
+###### 视图绘制标识
+
+```freemarker
+CTRLTYPE=VIEWLAYOUTPANEL#APPDEGRIDVIEW
+```
+
+`CTRLTYPE` 是部件类型，`VIEWLAYOUTPANEL#APPDEGRIDVIEW` 是视图布局面板标识名称和视图标识名称，属于 IBizSys 模型预置。
 
 
 #### 视图样式
