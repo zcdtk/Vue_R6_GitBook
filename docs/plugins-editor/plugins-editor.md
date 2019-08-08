@@ -45,7 +45,23 @@ EDITORTYPE=pluginseditor
 </plugins-editor>
 ```
 
-假设编辑属性代码名称为  `ordername`，经过 `FreeMarker` 引擎处理后，代码如下：
+
+#### 4. 新建系统应用插件
+
+如下图所示：
+![系统应用插件](/imgs/plugins-editor/plugins-editor.png)
+
+其中插件类型必须是编辑器自定义绘制插件，插件标识必须与扩展编辑器标识一致。
+
+
+
+### 扩展编辑器使用
+
+
+*此处不做扩展编辑器使用介绍，请参考其他文档。*
+
+
+假设编辑属性代码名称为  `ordername`，引用后的扩展编辑器经过 `FreeMarker` 引擎处理后，代码如下：
 ```html
 <plugins-editor 
     name='ordername' 
@@ -112,18 +128,3 @@ public destroyed(): void {
 ```javascript
 this.$emit('formitemvaluechange', { name: 'ordername', value: '123123123132132132' });
 ```
-
-
-#### 4. 新建系统应用插件
-
-如下图所示：
-![系统应用插件](/imgs/plugins-editor/plugins-editor.png)
-
-其中插件类型必须是编辑器自定义绘制插件，插件标识必须与扩展编辑器标识一致。
-
-
-
-### 扩展编辑器使用
-
-
-此处不做扩展编辑器使用介绍。
