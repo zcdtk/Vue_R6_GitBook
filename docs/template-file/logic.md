@@ -17,7 +17,7 @@ IBizSys 模型预置逻辑丰富了应用的交互操作，通过配置化导向
 <blockquote style="border-color: #2892ec;background-color: #f0faff;">
     <p>
         <strong>
-        本部分使用前台调用的界面行为作为说明对象，解释逻辑的构成单位以及构成内容。
+        本部分使用界面行为前台调用（类别文件）作为说明对象，解释逻辑的构成单位以及构成内容。
         </strong>
     </p>
 </blockquote>

@@ -18,7 +18,7 @@
 <blockquote style="border-color: #2892ec;background-color: #f0faff;">
     <p>
         <strong>
-        本部分使用下拉列表框编辑器和文本框编辑器作为说明对象，解释编辑器的构成单位以及构成内容。
+        本部分使用下拉列表框编辑器（类别文件）、文本框编辑器（类别文件）作为说明对象，解释编辑器的构成单位以及构成内容。
         </strong>
     </p>
 </blockquote>

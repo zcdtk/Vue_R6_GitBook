@@ -15,7 +15,7 @@
 <blockquote style="border-color: #2892ec;background-color: #f0faff;">
     <p>
         <strong>
-        本部分使用表格部件作为说明对象，解释部件的构成单位以及构成内容。
+        本部分使用实体表格部件（类别文件）作为说明对象，解释部件的构成单位以及构成内容。
         </strong>
     </p>
 </blockquote>
