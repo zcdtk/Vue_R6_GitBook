@@ -50,7 +50,7 @@ ${render_block}
 
 如下图所图：
 
-![部件扩展文件](/imgs/plugins-control/plugins-control.png)
+![部件扩展文件](/imgs/plugins-control/control-files.png)
 
 
 #### 2. 新建扩展部件标识
@@ -75,8 +75,83 @@ CTRLTYPE=APPMENU#QUICKMENUBAR
 
 
 #### 3. 新建部件标签内容
+
+菜单部件标签内容如下：
+
+```freemarker
+<#--  content  -->
+<#assign content>
+    showBusyIndicator={${ctrl.isShowBusyIndicator()?c}} 
+    collapsechange={this.collapseChange} 
+    mode={this.mode} 
+    selectTheme={this.selectTheme} 
+    isDefaultPage={this.isDefaultPage} 
+    defPSAppView={this.defPSAppView}
+</#assign>
+<#ibizinclude>
+../@MACRO/HTML/DEFAULT.html.ftl
+</#ibizinclude>
+```
+
+`content` 默认标签 `DEFAULT.html.ftl` 定义属性变量，该变量将发布标签绑定属性参数。
+
+属性说明如下：
+- showBusyIndicator：是否显示加载状态
+- collapsechange：菜单收缩变化
+- mode：菜单模式（位置）
+- selectTheme：主题
+- isDefaultPage：是否默认页面
+- defPSAppView：默认页面
+
+`DEFAULT.html.ftl` 内容如下：
+
+```freemarker
+<#-- ctrl document  -->
+<view_${ctrl.getName()} 
+    viewState={this.viewState} 
+    <#if content??>
+    ${content} 
+    </#if> 
+    name='${ctrl.name}' 
+    ref='${ctrl.name}' 
+    <#if ctrl.getHookEventNames()??>
+    <#list ctrl.getHookEventNames() as eventName>
+    on-${eventName?lower_case}={($event: any) => this.${ctrl.name}_${eventName?lower_case}($event)} 
+    </#list>
+    </#if>
+    on-closeview={($event: any) => this.closeView($event)}>
+</view_${ctrl.getName()}>
+```
+
+
+快捷菜单扩展部件标签内容如下：
+
+```freemarker
+<#--  content  -->
+<#assign content> 
+    showBusyIndicator={${ctrl.isShowBusyIndicator()?c}} 
+</#assign>
+<#ibizinclude>
+../@MACRO/HTML/DEFAULT.html.ftl
+</#ibizinclude>
+```
+
+新的扩展取消了其他属性绑定，只保留 `showBusyIndicator` 是否显示加载状态属性
+
+
 #### 4. 新建部件绘制内容
+
+
+
+
 #### 5. 新建系统应用插件
+
+
+如下图所示：
+
+![系统应用插件](/imgs/plugins-control/plugins-control.png)
+
+其中插件类型必须是对应插件类型，插件标识必须与扩展部件标识一致。
 
 
 ### 逻辑扩展
