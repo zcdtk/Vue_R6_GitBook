@@ -30,10 +30,12 @@
 
 #### 2. 新建扩展编辑器标识
 
+扩展标识内容：
+
 ```freemarker
 EDITORTYPE=pluginseditor
 ```
-`EDITORTYPE` 是部件类型，`pluginseditor` 是编辑器标识名称，属于用户自定义，在配置平台中使用。
+`EDITORTYPE` 是编辑器类型，`pluginseditor` 是编辑器标识名称，属于用户自定义，在配置平台中使用。
 
 
 #### 3. 新建编辑器默认内容
