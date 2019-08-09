@@ -15,11 +15,11 @@ Vue R6 是 IBiSys 基于 Vue 新一代开源前端解决方案（以下简称解
 解决方案入门为中、高级难度，适合掌握 `FreeMarker`、`Vue`、`TypeScript` 等技术的开发人员。
 
 <div class="pic-plus">
-  <img width="300" height="120" src="https://freemarker.apache.org/images/overview.png">
+  <img width="300" height="120" src="./imgs/freemarker-logo.png">
   <span>+</span>
-  <img width="150" height="150" src="https://vuejs.org/images/logo.png">
+  <img width="150" height="150" src="./imgs/vue-logo.png">
   <span>+</span>
-  <img width="150" height="150" src="https://miro.medium.com/max/700/1*mn6bOs7s6Qbao15PMNRyOA.png">
+  <img width="150" height="150" src="./imgs/typescript-logo.png">
 </div>
 
 <style>
