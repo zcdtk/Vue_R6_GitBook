@@ -22,6 +22,11 @@
 - 默认编辑器内容 EDITOR.tsx.ftl
 - 编辑器标识 template.properties
 
+如下图所图：
+
+![编辑器文件](/imgs/plugins-editor/editor-files.png)
+
+
 
 #### 2. 新建扩展编辑器标识
 
@@ -49,6 +54,7 @@ EDITORTYPE=pluginseditor
 #### 4. 新建系统应用插件
 
 如下图所示：
+
 ![系统应用插件](/imgs/plugins-editor/plugins-editor.png)
 
 其中插件类型必须是编辑器自定义绘制插件，插件标识必须与扩展编辑器标识一致。
