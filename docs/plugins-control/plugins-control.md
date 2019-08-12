@@ -40,6 +40,8 @@ ${render_block}
 </#if>
 ```
 
+查看更多详情，[点击](http://172.16.180.229/wangxiang1/VUE_R6_FTL/blob/master/@CONTROL/%E5%BA%94%E7%94%A8%E8%8F%9C%E5%8D%95/CONTROL.tsx.ftl)
+
 内容扩展步骤如下：
 - 新建部件模板文件
 - 新建扩展部件标识
