@@ -80,7 +80,7 @@ CTRLTYPE=APPMENU
 CTRLTYPE=APPMENU#QUICKMENUBAR
 ```
 
-`CTRLTYPE` 是部件类型，`APPMENU#QUICKMENUBAR` 是部件标识名称，其中QUICKMENUBAR属于用户自定义，在配置平台中使用。
+`CTRLTYPE` 是部件类型，`APPMENU#QUICKMENUBAR` 是部件标识名称，其中 `QUICKMENUBAR` 属于用户自定义，在配置平台中使用。
 
 部件级扩展标识，只需要在预置部件标识后添加 `#<部件名称>`，即可使用。
 
