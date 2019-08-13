@@ -54,7 +54,7 @@ ${front_block}
 
 如下图所图：
 
-![部件扩展文件](/imgs/plugins-logic/logic-fiels.png)
+![部件扩展文件](/imgs/plugins-logic/logic-files.png)
 
 
 #### 2. 新建扩展界面行为标识
