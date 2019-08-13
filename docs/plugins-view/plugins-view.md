@@ -40,6 +40,42 @@
 
 
 #### 2. 新建扩展视图标识
+
+
+IBizSys 模型预置实体表格视图标识如下：
+
+```freemarker
+CTRLTYPE=VIEWLAYOUTPANEL#APPDEGRIDVIEW
+```
+
+`CTRLTYPE` 是部件类型，`VIEWLAYOUTPANEL#APPDEGRIDVIEW` 是实体表格视图布局样式标识名称，`VIEWLAYOUTPANEL` 、 `APPDEGRIDVIEW` 于IBizSys 模型预置。
+
+`VIEWLAYOUTPANEL` 是布局面板标识，`APPDEGRIDVIEW` 是视图标识，二者一起，才是视图布局样式标识。
+
+视图样式扩展标识命名模式有两种方式：
+- 名称附加
+- 名称替换
+
+名称附加的扩展方式如下：
+
+```freemarker
+CTRLTYPE=VIEWLAYOUTPANEL#APPDEGRIDVIEW_pluginsfront
+```
+
+`CTRLTYPE` 是部件类型，`VIEWLAYOUTPANEL#APPDEGRIDVIEW` 是实体表格视图布局样式标识名称，`VIEWLAYOUTPANEL` 、 `APPDEGRIDVIEW` 于IBizSys 模型预置，`_pluginsfront` 属于附加的扩展标识名称，三者组成了完整的扩展标识名称。
+
+
+名称替换的扩展方式如下：
+
+```freemarker
+CTRLTYPE=VIEWLAYOUTPANEL#pluginsfront
+```
+
+`CTRLTYPE` 是部件类型，`VIEWLAYOUTPANEL#pluginsfront` 是实体表格视图布局样式标识名称，`VIEWLAYOUTPANEL` 于IBizSys 模型预置，`_pluginsfront` 属于替换的扩展标识名称，二者组成了完整的扩展标识名称。
+
+
+
+
 #### 3. 新建扩展视图绘制内容
 #### 4. 新建系统应用插件
 #### 5. 扩展后示例
