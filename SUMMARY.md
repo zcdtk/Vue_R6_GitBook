@@ -3,6 +3,7 @@
 
 * [前言](README.md)
 * [快速上手](docs/getting-started/getting-started.md)
+* [注意事项](docs/precautions/precautions.md)
 * [开发说明](docs/development-notes/development-notes.md)
 * [技术体系](docs/technology-system/technology-system.md)
 * [项目结构](docs/project-structure/project-structure.md)
