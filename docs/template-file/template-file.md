@@ -1,6 +1,12 @@
 ## 模板文件
 
 
+* [模板文件定义](#模板文件定义)
+    * [类别文件](#类别文件)
+    * [动态构建业务文件](#动态构建业务文件)
+* [模板文件组成结构](#模板文件组成结构)
+
+
 <blockquote style="border-color: #2892ec;background-color: #f0faff;">
     <p>
         <strong>注：该部分开发需要熟悉 FreeMarker </strong>
@@ -44,8 +50,4 @@
 
 ### 模板文件组成结构
 
-graph LR;  
-　　A-->B;    
-　　A-->C;  
-　　B-->D;  
-　　C-->D; 
+![模板文件结构](/imgs/template-file/structure.png)
