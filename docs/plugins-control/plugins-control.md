@@ -152,7 +152,7 @@ CTRLTYPE=APPMENU#QUICKMENUBAR
 
 #### 4. 新建部件绘制内容
 
-
+查看更多详情，[点击](http://172.16.180.229/wangxiang1/VUE_R6_FTL/blob/master/@CONTROL/%E5%BA%94%E7%94%A8%E8%8F%9C%E5%8D%95%EF%BC%88%E5%BF%AB%E6%8D%B7%E8%8F%9C%E5%8D%95%EF%BC%89/CONTROL.tsx.ftl)
 
 
 #### 5. 新建系统应用插件
