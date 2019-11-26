@@ -25,7 +25,6 @@ Vue R6 是 IBiSys 基于 Vue 新一代开源前端解决方案（以下简称解
 }
 </style>
 
-
 ## 特性
 
 - 基于多版本企业级中后台产品迭代升级
@@ -56,7 +55,7 @@ Vue R6 是 IBiSys 基于 Vue 新一代开源前端解决方案（以下简称解
 - Vue Cli 
 
 
-## 链接
+## 参考链接
 
 - [FreeMarker](https://freemarker.apache.org/)
 - [Node.js](https://nodejs.org)
