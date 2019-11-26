@@ -1,16 +1,4 @@
-## 视图
-
-
-* [构成单位](#构成单位)
-    * [视图（逻辑与内容）](#视图（逻辑与内容）)
-        * [视图逻辑](#视图逻辑)
-        * [视图内容](#视图内容)
-            * [视图绘制内容](#视图绘制内容)
-            * [视图绘制样式](#视图绘制样式)
-            * [视图绘制标识](#视图绘制标识)
-    * [视图样式](#视图样式)
-    * [视图标识](#视图标识)
-* [构成内容](#构成内容)
+# 视图
 
 
 视图是业务模型内容的最大承载节点，它包含了部件、逻辑等。
@@ -30,20 +18,20 @@
 - 构成内容
 
 
-### 构成单位
+## 构成单位
 
-[表格视图](http://172.16.180.229/wangxiang1/VUE_R6_FTL/tree/master/@VIEW/%E5%AE%9E%E4%BD%93%E8%A1%A8%E6%A0%BC%E8%A7%86%E5%9B%BE)视图的基本构成单位：
+表格视图视图的基本构成单位：
 - 视图（逻辑与内容） VIEW.tsx.ftl
 - 视图样式 VIEW.less.ftl
 - 视图标识 template.properties
 
 
-#### 视图（逻辑与内容）
+### 视图（逻辑与内容）
 
 
-##### 视图逻辑
+#### 视图逻辑
 
-[视图逻辑](http://172.16.180.229/wangxiang1/VUE_R6_FTL/tree/master/@VIEW)则是独立的目录维护，表格视图 [VIEW.tsx.ftl](http://172.16.180.229/wangxiang1/VUE_R6_FTL/tree/master/@VIEW/%E5%AE%9E%E4%BD%93%E8%A1%A8%E6%A0%BC%E8%A7%86%E5%9B%BE) 代码如下：
+视图逻辑则是独立的目录维护，表格视图 VIEW.tsx.ftl 代码如下：
 
 ```freemarker
 <#ibizinclude>
@@ -164,9 +152,9 @@
 其中 `LAYOUTPANEL_VIEW.tsx.ftl` 主要用于输出视图内容。
 
 
-##### 视图内容
+#### 视图内容
 
-[视图内容](http://172.16.180.229/wangxiang1/VUE_R6_FTL/tree/master/@CONTROL/%E8%A7%86%E5%9B%BE%E5%B8%83%E5%B1%80%E9%9D%A2%E6%9D%BF)主要在部件的视图布局面板中，该面板包含所有的视图布局。
+视图内容主要在部件的视图布局面板中，该面板包含所有的视图布局。
 
 `LAYOUTPANEL_VIEW.tsx.ftl` 输出视图内容，代码如下：
 ```freemarker
@@ -281,7 +269,7 @@ ${P.getLayoutCode().code}
     }
 ```
 
-该部分包括视图消息与绘制内容，此处主要介绍绘制内容，以[实体表格视图](http://172.16.180.229/wangxiang1/VUE_R6_FTL/tree/master/@CONTROL/%E8%A7%86%E5%9B%BE%E5%B8%83%E5%B1%80%E9%9D%A2%E6%9D%BF/%E5%AE%9E%E4%BD%93%E8%A1%A8%E6%A0%BC%E8%A7%86%E5%9B%BE)为例。
+该部分包括视图消息与绘制内容，此处主要介绍绘制内容，以实体表格视图为例。
 
 
 视图内容成员主要包括：
@@ -290,7 +278,7 @@ ${P.getLayoutCode().code}
 - 视图绘制标识 VIEW.tsx.ftl
 
 
-###### 视图绘制内容
+##### 视图绘制内容
 
 表格视图绘制内容如下：
 ```freemarker
@@ -346,12 +334,12 @@ ${P.getCtrlCode('grid', 'CONTROL.html').code}
 ```
 
 
-###### 视图绘制样式
+##### 视图绘制样式
 
-视图绘制样式丰富了的视图内容组成，了解更多查看[视图样式](#视图样式)
+视图绘制样式丰富了的视图内容组成。
 
 
-###### 视图绘制标识
+##### 视图绘制标识
 
 ```freemarker
 CTRLTYPE=VIEWLAYOUTPANEL#APPDEGRIDVIEW
@@ -360,25 +348,25 @@ CTRLTYPE=VIEWLAYOUTPANEL#APPDEGRIDVIEW
 `CTRLTYPE` 是部件类型，`VIEWLAYOUTPANEL#APPDEGRIDVIEW` 是视图布局面板标识名称和视图标识名称，属于 IBizSys 模型预置。
 
 
-#### 视图样式
+### 视图样式
 
 视图样式输出过程如下：
 
 DEFAULT.less.ftl --------> 布局面板实体表格视图样式 --------> 实体表格视图样式
 
-输出[实体表格视图](http://172.16.180.229/wangxiang1/VUE_R6_FTL/blob/master/@VIEW/%E5%AE%9E%E4%BD%93%E8%A1%A8%E6%A0%BC%E8%A7%86%E5%9B%BE/VIEW.less.ftl)样式 `FreeMarker` 代码，它指向布局面板实体表格视图样式。
+输出实体表格视图样式 `FreeMarker` 代码，它指向布局面板实体表格视图样式。
 ```freemarker
 ${P.getLayoutCode().code}
 ```
 
-[布局面板实体表格视图样式](http://172.16.180.229/wangxiang1/VUE_R6_FTL/blob/master/@CONTROL/%E8%A7%86%E5%9B%BE%E5%B8%83%E5%B1%80%E9%9D%A2%E6%9D%BF/%E5%AE%9E%E4%BD%93%E8%A1%A8%E6%A0%BC%E8%A7%86%E5%9B%BE/VIEW.less.ftl)，引入了宏文件，视图样式扩展，目标是替换该文件。
+布局面板实体表格视图样式，引入了宏文件，视图样式扩展，目标是替换该文件。
 ```freemarker
 <#ibizinclude>
 ../@MACRO/DEFAULT.less.ftl
 </#ibizinclude>
 ```
 
-[DEFAULT.less.ftl](http://172.16.180.229/wangxiang1/VUE_R6_FTL/blob/master/@CONTROL/%E8%A7%86%E5%9B%BE%E5%B8%83%E5%B1%80%E9%9D%A2%E6%9D%BF/@MACRO/DEFAULT.less.ftl) 宏文件内容。
+DEFAULT.less.ftl 宏文件内容。
 ```freemarker
 // this is less
 
@@ -421,7 +409,7 @@ ${css.getCssStyle()}
 ```
 
 
-#### 视图标识
+### 视图标识
 
 ```freemarker
 VIEWTYPE=APPDEGRIDVIEW
@@ -429,6 +417,6 @@ VIEWTYPE=APPDEGRIDVIEW
 
 `VIEWTYPE` 是视图类型，`APPDEGRIDVIEW` 是视图标识名称，属于 IBizSys 模型预置。
 
-### 构成内容
+## 构成内容
 
 后续更新

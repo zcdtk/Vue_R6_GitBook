@@ -1,16 +1,6 @@
-## 部件
+# 部件
 
-
-* [构成单位](#构成单位)
-    * [部件标签](#部件标签)
-    * [部件样式](#部件样式)
-    * [部件（逻辑与内容）](#部件（逻辑与内容）)
-    * [部件成员](#部件成员)
-    * [部件标识](#部件标识)
-* [构成内容](#构成内容)
-
-
-部件是应用的数据承载单位，处理处理交互逻辑、绘制内容等。<br>
+部件是应用的数据承载单位，处理处理交互逻辑、绘制内容等。
 
 <blockquote style="border-color: #2892ec;background-color: #f0faff;">
     <p>
@@ -21,9 +11,10 @@
 </blockquote>
 
 
-### 构成单位
+## 构成单位
 
-[表格](http://172.16.180.229/wangxiang1/VUE_R6_FTL/tree/master/@CONTROL/%E8%A1%A8%E6%A0%BC)的构成单位分为以下 5 个部分
+表格的构成单位分为以下 5 个部分文件：
+
 - 部件标签 CONTROL.html.ftl 
 - 部件样式 CONTROL.less.ftl 
 - 部件（逻辑与内容）CONTROL.tsx.ftl 
@@ -31,9 +22,9 @@
 - 部件标识 template.properties 
 
 
-#### 部件标签
+### 部件标签
 
-[CONTROL.html.ftl](http://172.16.180.229/wangxiang1/VUE_R6_FTL/blob/master/@CONTROL/%E8%A1%A8%E6%A0%BC/CONTROL.html.ftl) 代码
+CONTROL.html.ftl 代码
 
 ```freemarker
 <#ibizinclude>
@@ -94,9 +85,9 @@
 一个部件标签组装和被引用后发布结果，如上所示。
 
 
-#### 部件样式
+### 部件样式
 
-[CONTROL.less.ftl](http://172.16.180.229/wangxiang1/VUE_R6_FTL/blob/master/@CONTROL/%E8%A1%A8%E6%A0%BC/CONTROL.less.ftl) 代码
+CONTROL.less.ftl 代码
 
 ```freemarker
 .grid {
@@ -130,9 +121,9 @@
 样式代码添加了部件自定义样式优先级使用，其后一部分是默认样式逻辑，包括系统样式表等一系列样式。
 
 
-#### 部件（逻辑与内容）
+### 部件（逻辑与内容）
 
-[CONTROL.tsx.ftl](http://172.16.180.229/wangxiang1/VUE_R6_FTL/blob/master/@CONTROL/%E8%A1%A8%E6%A0%BC/CONTROL.tsx.ftl) 该部分包含逻辑与内容
+CONTROL.tsx.ftl该部分包含逻辑与内容
 - 逻辑主要包括变量声明、数据交互等，逻辑内容太多，此处不展开
 - 内容主要指绘制内容（render）
 
@@ -152,7 +143,8 @@ ${render_block}
 </#if>
 ```
 
-`render_block` 是部件内容扩展，用于绘制内容。<br>
+`render_block` 是部件内容扩展，用于绘制内容。
+
 发开人员使用部件扩展时，只需要在扩展的部件内定义如下，即可完成的替换默认内容。
 
 ```freemarker
@@ -172,16 +164,15 @@ public render() {
 
 完整的扩展，还有很多其他的内容支持，此处只做 `front_block` 简单说明。
 
-#### 部件成员
+### 部件成员
 
-[CONTROL.tsx#COLUMN.ftl](http://172.16.180.229/wangxiang1/VUE_R6_FTL/blob/master/@CONTROL/%E8%A1%A8%E6%A0%BC/CONTROL.tsx%23COLUMN.ftl) 在 `CONTROL.tsx` 后以 `#` 开始命令的文件，属于部件成员，该出演的类型在 IBizSys 模型中已经预置，可以直接声明使用。<br>
+CONTROL.tsx#COLUMN.ftl 在 `CONTROL.tsx` 后以 `#` 开始命令的文件，属于部件成员，该出演的类型在 IBizSys 模型中已经预置，可以直接声明使用。
+
 成员是部件逻辑或者部件内容的组成单元，通过获取部件成员模型，可以输出对应的部件逻辑或者内容。
 
+### 部件标识
 
-
-#### 部件标识
-
-[template.properties](http://172.16.180.229/wangxiang1/VUE_R6_FTL/blob/master/@CONTROL/%E8%A1%A8%E6%A0%BC/template.properties)
+template.properties
 
 ```freemarker
 CTRLTYPE=GRID
@@ -189,6 +180,6 @@ CTRLTYPE=GRID
 `CTRLTYPE` 是部件类型，`GRID` 是部件标识名称，属于 IBizSys 模型预置。
 
 
-### 构成内容
+## 构成内容
 
 部件构成，部件成员组装部件（逻辑与内容），部件标签被视图引用发布，部件（逻辑与内容）负责数据交互，部件样式丰富部件内容表现。

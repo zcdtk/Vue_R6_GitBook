@@ -1,13 +1,4 @@
-## 逻辑
-
-* [构成单位](#构成单位)
-    * [前台调用逻辑内容](#前台调用逻辑内容)
-        * [扩展变量说明](#扩展变量说明)
-        * [支持界面行为数据类型和处理模式](#支持界面行为数据类型和处理模式)
-        * [预置参数处理](#预置参数处理)
-        * [其他关联逻辑](#其他关联逻辑)
-    * [前台调用逻辑标识](#前台调用逻辑标识)
-* [构成内容](#构成内容)
+# 逻辑
 
 
 逻辑主要作用是构建应用的交互操作，从事件触发，到数据请求、页面展示，都属于逻辑的一部分。
@@ -23,14 +14,14 @@ IBizSys 模型预置逻辑丰富了应用的交互操作，通过配置化导向
 </blockquote>
 
 
-### 构成单位
+## 构成单位
 
-[前台调用](http://172.16.180.229/wangxiang1/VUE_R6_FTL/tree/master/@LOGIC/@UIACTION/%E5%89%8D%E5%8F%B0%E8%B0%83%E7%94%A8)的构成单位分为以下 2 个部分
+前台调用的构成单位分为以下 2 个部分文件：
 - 前台调用逻辑内容 LOGIC.tsx.ftl
 - 前台调用逻辑标识 template.properties 
 
 
-#### 前台调用逻辑内容
+### 前台调用逻辑内容
 
 前台调用逻辑内容如下：
 
@@ -49,18 +40,18 @@ ${front_block}
 </#if>
 ```
 
-由于默认内容过多，此不做展开，查看详情，点击 [LOGIC.tsx.ftl](http://172.16.180.229/wangxiang1/VUE_R6_FTL/blob/master/@LOGIC/@UIACTION/%E5%89%8D%E5%8F%B0%E8%B0%83%E7%94%A8/LOGIC.tsx.ftl) 访问
+由于默认内容过多，此不做展开，查看详情，点击 LOGIC.tsx.ftl 访问
 
-此处将选取部分要点做讲解。
+此处将选取部分要点做讲解：
 - 扩展变量说明
 - 支持界面行为数据类型和处理模式
 - 预置参数处理
 - 其他关联逻辑
 
 
-##### 扩展变量说明
+#### 扩展变量说明
 
-`front_block` 是界面行为内容扩展，用于绘制内容。<br>
+`front_block` 是界面行为内容扩展，用于绘制内容。
 
 发开人员使用界面行为扩展时，只需要在界面行为内定义如下，即可完成的替换默认内容。
 
@@ -81,7 +72,7 @@ public ${item.getFullCodeName()}{
 完整的扩展，还有很多其他的内容支持，此处只做 `front_block` 简单说明。
 
 
-##### 支持界面行为数据类型和处理模式
+#### 支持界面行为数据类型和处理模式
 
 前台界面行为支持单项数据主键、多项数据主键和无数据，其他数据类型不支持，开发人员选择其他数据类型后，触发界面行为会有报错提示。
 
@@ -99,13 +90,16 @@ public ${item.getFullCodeName()}{
 
 其中 `SINGLEDATA` 是单项数据，`MULTIDATA` 是多项数据。
 
-处理模式支持以下模式
+处理模式支持以下模式：
 - 打开视图或向导（模态）
 - 打开顶级视图 
 - 打开html页面
 - 用户自定义
 
-*打开html页面* `item.getFrontProcessType() == 'OPENHTMLPAGE'`
+##### 打开html页面  
+
+条件：`item.getFrontProcessType() == 'OPENHTMLPAGE'`
+
 ```freemarker
 <#--  打开独立程序弹出  -->
 return new Promise((resolve, reject) => {
@@ -119,7 +113,10 @@ return new Promise((resolve, reject) => {
 });
 ```
 
-*用户自定义* `item.getFrontProcessType() == 'OTHER'`
+##### 用户自定义
+
+条件： `item.getFrontProcessType() == 'OTHER'`
+
 ```freemarker
 // 自定义实体界面行为
 this.$Notice.warning({ title: '错误', desc: '${item.getCaption()} 未实现' });
@@ -128,10 +125,14 @@ return new Promise((resolve: any, reject: any) => {
 });
 ```
 
-*打开视图或向导（模态）和打开顶级视图* `item.getFrontProcessType() == 'TOP' || item.getFrontProcessType() == 'WIZARD'` <br>
+##### 打开视图或向导（模态）和打开顶级视图
+
+条件：`item.getFrontProcessType() == 'TOP' || item.getFrontProcessType() == 'WIZARD'` 
+
 两者打开视图，是根据视图的打开方式来支持不同的打开逻辑处理。
 
-1. 打开顶级分页视图
+##### 打开顶级分页视图
+
 ```freemarker
 <#elseif frontview.getOpenMode() =='INDEXVIEWTAB' || frontview.getOpenMode() == ''>
 <#--  打开顶级分页视图  -->
@@ -153,7 +154,8 @@ const openIndexViewTab = (viewpath: string, data: any) => {
 openIndexViewTab('${frontview.getPSAppModule().codeName?lower_case}_${frontview.codeName?lower_case}', data);
 ```
 
-2. 打开模态
+##### 打开模态
+
 ```freemarker
 <#elseif frontview.getOpenMode() = 'POPUPMODAL'>
 <#--  打开模态  -->
@@ -191,7 +193,8 @@ const view: any = {
 openPopupModal(view, data);
 ```
 
-3. 打开抽屉 
+##### 打开抽屉 
+
 ```freemarker
 <#elseif frontview.getOpenMode()?index_of('DRAWER') == 0>
 <#--  打开抽屉  -->
@@ -230,7 +233,8 @@ const view: any = {
 openDrawer(view, data);
 ```
 
-4. 打开气泡卡片
+##### 打开气泡卡片
+
 ```freemarker
 <#elseif frontview.getOpenMode() == 'POPOVER'>
 <#--  打开气泡卡片  -->
@@ -270,7 +274,7 @@ openPopOver(view, data);
 ```
 
 
-##### 预置参数处理
+#### 预置参数处理
 
 界面行为数据变量声明
 ```javascript
@@ -282,7 +286,8 @@ const data: any = { srfparentdata: {} };
 - 多项数据主键处理
 - 界面行为附加参数处理
 
-*父数据处理*
+##### 父数据处理
+
 ```javascript
 const _this: any = this;
 if (_this.srfparentdata) {
@@ -290,7 +295,8 @@ if (_this.srfparentdata) {
 }
 ```
 
-*单项数据主键处理*
+##### 单项数据主键处理
+
 ```freemarker
 <#if item.getActionTarget() == 'SINGLEKEY'>
 
@@ -320,7 +326,8 @@ if (_this.srfparentdata) {
 </#if>
 ```
 
-*多项数据主键处理*
+##### 多项数据主键处理
+
 ```freemarker
 <#if item.getActionTarget() == 'MULTIKEY'>
     
@@ -357,7 +364,8 @@ if (Object.is(paramItem, 'srfkeys')) {
 </#if>
 ```
 
-*界面行为附加参数处理*
+##### 界面行为附加参数处理
+
 ```javascript
 if (params && Object.keys(params).length > 0) {
     const _params: any = {};
@@ -382,13 +390,14 @@ if (params && Object.keys(params).length > 0) {
 ```
 
 
-##### 其他关联逻辑
+#### 其他关联逻辑
 
-前台调用界面行为关联逻辑主要包含两个部：
+前台调用界面行为关联逻辑主要包含两个部分：
 - 是否重新加载数据
 - 后续界面行为
 
-*是否重新加载数据*
+##### 是否重新加载数据
+
 ```freemarker
 <#--  是否重新加载数据  -->
 <#if item.isReloadData?? && item.isReloadData()>
@@ -399,7 +408,8 @@ if (xData && xData.refresh && xData.refresh instanceof Function) {
 }
 ```
 
-*后续界面行为*
+##### 后续界面行为
+
 ```freemarker
 <#--  后续界面行为  -->
 <#if item.getNextPSUIAction?? && item.getNextPSUIAction()??>
@@ -411,7 +421,7 @@ if (_this.${nextPSUIAction.getFullCodeName()} && _this.${nextPSUIAction.getFullC
 ```
 
 
-#### 前台调用逻辑标识
+### 前台调用逻辑标识
 
 ```freemarker
 LOGICTYPE=FRONT
@@ -420,6 +430,6 @@ LOGICTYPE=FRONT
 `LOGICTYPE` 是逻辑类型，`FRONT` 是逻辑标识名称，属于 IBizSys 模型预置。
 
 
-### 构成内容
+## 构成内容
 
 解析业务逻辑通过 `FreeMarker` 引擎发布业务逻辑内容
