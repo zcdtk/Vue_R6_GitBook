@@ -1,10 +1,10 @@
-# 逻辑扩展
+# 简介
 
 
 IBizSys 模型预置逻辑处理可配置预置业务逻辑，当预置业务逻辑不足以承担所有业务功能，就需要对逻辑功能做除扩展。
 
 
-## 内容扩展
+# 内容扩展
 <blockquote style="border-color: #2892ec;background-color: #f0faff;">
     <p>
     本部分使用界面行为前台调用作为说明对象，解释逻辑扩展。
@@ -37,7 +37,7 @@ ${front_block}
 - 新建系统应用插件
 
 
-### 新建扩展界面行为模板文件
+## 新建扩展界面行为模板文件
 
 常规情况下，建立以下两个个部分即可：
 - 部件绘制内容 LOGIC.tsx.ftl
@@ -48,7 +48,7 @@ ${front_block}
 ![部件扩展文件](../../imgs/plugins-logic/logic-files.png)
 
 
-### 新建扩展界面行为标识
+## 新建扩展界面行为标识
 
 IBizSys 模型预置前台界面行为标识如下：
 
@@ -67,7 +67,7 @@ LOGICTYPE=pluginsfront
 `LOGICTYPE` 是逻辑类型，`pluginsfront` 是逻辑标识名称，属于用户自定义，在配置平台中使用。
 
 
-### 新建扩展界面行为内容
+## 新建扩展界面行为内容
 
 扩展内容如下:
 
@@ -94,7 +94,7 @@ LOGICTYPE=pluginsfront
 ```
 
 
-### 新建系统应用插件
+## 新建系统应用插件
 
 如下图所示：
 
