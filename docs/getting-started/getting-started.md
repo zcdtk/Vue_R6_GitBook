@@ -1,4 +1,4 @@
-# 快速上手
+# 简介
 
 解决方案通过 `FreeMarker` 引擎构建发布 IBizSys 业务模型成果文件，为开发人员提供良好开发体验。
 
@@ -11,12 +11,12 @@
 </blockquote>
 
 
-## 本地示例
+# 示例说明
 
 实际项目开发中，解决方案需要根据不同的业务要求，对代码的构建、调试、代理、打包部署等一系列工程化的需求。
 项目开发依赖 `Yarn` 和 `Vue Cli (3.0)` 等工具。
 
-### 开发环境
+## 开发环境
 
 > 在安装使用 `Yarn` 和 `Vue Cli (3.0)` 前，务必确认 [Node.js](https://nodejs.org) 已经升级到 v4.8.0 或以上，强烈建议升级至最新版本。
 > 如果你想了解更多 `Yarn` 工具链的功能和命令，建议访问 [Yarn](https://yarnpkg.com) 了解更多。
@@ -35,7 +35,7 @@ $ yarn global add @vue/cli
 
 ![开发环境信息](../../imgs/getting-started/development.png)
 
-###  安装依赖
+##  安装依赖
 
 打开前端项目，进入工作空间下，执行安装依赖命令
 
@@ -43,13 +43,13 @@ $ yarn global add @vue/cli
 $ yarn install
 ```
 
-### 远程代理
+## 远程代理
 
 修改远程代理文件 `vue.config.js` 代理地址，如下图：
 
 ![远程代理地址](../../imgs/getting-started/proxy.png)
 
-### 启动
+## 启动
 
 在工作空间下，执行启动命令
 
@@ -64,7 +64,7 @@ $ yarn serve
 $ http://localhost:8111
 ```
 
-### 打包
+## 打包
 
 在工作空间下，执行打包命令
 
