@@ -1,4 +1,4 @@
-# 视图
+# 简介
 
 
 视图是业务模型内容的最大承载节点，它包含了部件、逻辑等。
@@ -13,12 +13,8 @@
     </p>
 </blockquote>
 
-视图主要分为以下两个方面来介绍：
-- 构成单位
-- 构成内容
 
-
-## 构成单位
+# 构成单位
 
 表格视图视图的基本构成单位：
 - 视图（逻辑与内容） VIEW.tsx.ftl
@@ -26,10 +22,10 @@
 - 视图标识 template.properties
 
 
-### 视图（逻辑与内容）
+## 视图（逻辑与内容）
 
 
-#### 视图逻辑
+### 视图逻辑
 
 视图逻辑则是独立的目录维护，表格视图 VIEW.tsx.ftl 代码如下：
 
@@ -152,7 +148,7 @@
 其中 `LAYOUTPANEL_VIEW.tsx.ftl` 主要用于输出视图内容。
 
 
-#### 视图内容
+### 视图内容
 
 视图内容主要在部件的视图布局面板中，该面板包含所有的视图布局。
 
@@ -278,7 +274,7 @@ ${P.getLayoutCode().code}
 - 视图绘制标识 VIEW.tsx.ftl
 
 
-##### 视图绘制内容
+#### 视图绘制内容
 
 表格视图绘制内容如下：
 ```freemarker
@@ -334,12 +330,12 @@ ${P.getCtrlCode('grid', 'CONTROL.html').code}
 ```
 
 
-##### 视图绘制样式
+#### 视图绘制样式
 
 视图绘制样式丰富了的视图内容组成。
 
 
-##### 视图绘制标识
+#### 视图绘制标识
 
 ```freemarker
 CTRLTYPE=VIEWLAYOUTPANEL#APPDEGRIDVIEW
@@ -348,7 +344,7 @@ CTRLTYPE=VIEWLAYOUTPANEL#APPDEGRIDVIEW
 `CTRLTYPE` 是部件类型，`VIEWLAYOUTPANEL#APPDEGRIDVIEW` 是视图布局面板标识名称和视图标识名称，属于 IBizSys 模型预置。
 
 
-### 视图样式
+## 视图样式
 
 视图样式输出过程如下：
 
@@ -409,7 +405,7 @@ ${css.getCssStyle()}
 ```
 
 
-### 视图标识
+## 视图标识
 
 ```freemarker
 VIEWTYPE=APPDEGRIDVIEW
@@ -417,6 +413,6 @@ VIEWTYPE=APPDEGRIDVIEW
 
 `VIEWTYPE` 是视图类型，`APPDEGRIDVIEW` 是视图标识名称，属于 IBizSys 模型预置。
 
-## 构成内容
+# 构成内容
 
 后续更新

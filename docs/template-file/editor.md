@@ -1,3 +1,5 @@
+# 简介
+
 编辑器是应用原始数据的基本单位，用于数据的输入与展示。
 
 <blockquote style="border-color: #2892ec;background-color: #f0faff;">
