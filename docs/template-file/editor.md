@@ -60,7 +60,7 @@ EDITORTYPE=******
 
 ### 下拉列表框
 
-下拉列表框编辑器使用了 [iIVew](https://www.iviewui.com) 提供 Select 选择器。
+下拉列表框编辑器使用了 [iView](https://www.iviewui.com) 提供 Select 选择器。
 
 此处介绍默认编辑器标签和编辑器标识。
 
