@@ -29,7 +29,7 @@
 2. 访问 [Yarn](https://yarnpkg.com) ，根据文档安装 `Yarn`。
 3. 访问 [Vue Cli (3.0)](https://cli.vuejs.org/) ，根据文档安装 `Vue Cli (3.0)`。
 
-以下为 Windows 环境开发正常配置 ：
+Windows 环境开发正常配置如下图：
 
 ![开发环境信息](../../imgs/getting-started/development.png)
 
