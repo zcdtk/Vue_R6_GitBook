@@ -43,7 +43,7 @@ $ yarn install
 
 ## 修改远程代理地址
 
-修改远程代理文件 `vue.config.js` 代理地址，如下图：
+修改配置文件  `vue.config.js`  内远程代理地址，如下图：
 
 ![远程代理地址](../../imgs/getting-started/proxy.png)
 
