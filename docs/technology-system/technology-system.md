@@ -1,8 +1,19 @@
-# 技术体系
+# 简介
 
+解决方案，由多种不同的技术在不同内容场景上组成。
 
-解决方案的技术组成主要有两个部分
-- 基于 `FreeMarker` 的模板引擎，该模板解析业务模型数据，构建发布成果文件。
-- 成果 `Vue R6` 以 `TypeScript`、`TSX`、`Less` 作为编写规范，`iView`、`Element` 作为 UI 框架，`axios` 作为 `http` 客户端，并集成了 `RxJS`、`Echarts` 等库。
+模板部分如下：
+
+- iBiz V2：核心发布引擎
+- FreeMarker：解析业务模型数据
+
+前端素材部分如下：
+
+- 编写规范： TypeScript、TSX、Less  前端语言
+- UI 框架：iView、Element
+- Http：axios 
+- 其他：Rxjs、Echarts等
+
+# 结构
 
 ![技术体系](../../imgs/technology-system/technology-system.png)
