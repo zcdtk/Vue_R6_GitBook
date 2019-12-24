@@ -5,7 +5,7 @@
 * [快速上手](docs/getting-started/getting-started.md)
 * [开发说明](docs/development-notes/development-notes.md)
 * [技术体系](docs/technology-system/technology-system.md)
-* [项目结构](docs/project-structure/project-structure.md)
+* [成果结构](docs/project-structure/project-structure.md)
 * 模板文件
     * [结构](docs/template-file/structure.md)
     * [部件](docs/template-file/control.md)
