@@ -432,4 +432,7 @@ LOGICTYPE=FRONT
 
 # 构成内容
 
-解析业务逻辑通过 `FreeMarker` 引擎发布业务逻辑内容
+应用逻辑结构如下：
+
+![应用逻辑结构](../../imgs/template-file/app-logic-structure.png)
+
