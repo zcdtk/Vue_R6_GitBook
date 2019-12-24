@@ -415,4 +415,6 @@ VIEWTYPE=APPDEGRIDVIEW
 
 # 构成内容
 
-后续更新
+应用视图结构如下：
+
+![应用视图结构](../../imgs/template-file/app-view-structure.png)
