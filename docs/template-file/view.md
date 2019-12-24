@@ -341,7 +341,7 @@ ${P.getCtrlCode('grid', 'CONTROL.html').code}
 CTRLTYPE=VIEWLAYOUTPANEL#APPDEGRIDVIEW
 ```
 
-`CTRLTYPE` 是部件类型，`VIEWLAYOUTPANEL#APPDEGRIDVIEW` 是视图布局面板标识名称和视图标识名称，属于 IBizSys 模型预置。
+`CTRLTYPE` 是部件类型，`VIEWLAYOUTPANEL#APPDEGRIDVIEW` 是视图布局面板标识名称和视图标识名称，属于 iBiz 模型预置。
 
 
 ## 视图样式
@@ -411,7 +411,7 @@ ${css.getCssStyle()}
 VIEWTYPE=APPDEGRIDVIEW
 ```
 
-`VIEWTYPE` 是视图类型，`APPDEGRIDVIEW` 是视图标识名称，属于 IBizSys 模型预置。
+`VIEWTYPE` 是视图类型，`APPDEGRIDVIEW` 是视图标识名称，属于 iBiz 模型预置。
 
 # 构成内容
 

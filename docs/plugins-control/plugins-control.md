@@ -51,13 +51,13 @@ ${render_block}
 
 ## 新建扩展部件标识
 
-IBizSys 模型预置菜单部件标识如下：
+IBiz 模型预置菜单部件标识如下：
 
 ```freemarker
 CTRLTYPE=APPMENU
 ```
 
-`CTRLTYPE` 是部件类型，`APPMENU` 是部件标识名称，属于IBizSys 模型预置。
+`CTRLTYPE` 是部件类型，`APPMENU` 是部件标识名称，属于IBiz 模型预置。
 
 扩展部件标识内容：
 

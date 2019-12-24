@@ -1,7 +1,7 @@
 # 简介
 
 
-视图模板文件，是 IBizSys R6 具备完全意义的表现与逻辑分离。
+视图模板文件，是 IBiz R6 具备完全意义的表现与逻辑分离。
 
 
 # 内容扩展
@@ -36,13 +36,13 @@
 ## 新建扩展视图标识
 
 
-IBizSys 模型预置实体表格视图标识如下：
+IBiz 模型预置实体表格视图标识如下：
 
 ```freemarker
 CTRLTYPE=VIEWLAYOUTPANEL#APPDEGRIDVIEW
 ```
 
-`CTRLTYPE` 是部件类型，`VIEWLAYOUTPANEL#APPDEGRIDVIEW` 是实体表格视图布局样式标识名称，`VIEWLAYOUTPANEL` 、 `APPDEGRIDVIEW` 于IBizSys 模型预置。
+`CTRLTYPE` 是部件类型，`VIEWLAYOUTPANEL#APPDEGRIDVIEW` 是实体表格视图布局样式标识名称，`VIEWLAYOUTPANEL` 、 `APPDEGRIDVIEW` 于 iBiz 模型预置。
 
 `VIEWLAYOUTPANEL` 是布局面板标识，`APPDEGRIDVIEW` 是视图标识，二者一起，才是视图布局样式标识。
 
@@ -56,7 +56,7 @@ CTRLTYPE=VIEWLAYOUTPANEL#APPDEGRIDVIEW
 CTRLTYPE=VIEWLAYOUTPANEL#APPDEGRIDVIEW_pluginsfront
 ```
 
-`CTRLTYPE` 是部件类型，`VIEWLAYOUTPANEL#APPDEGRIDVIEW` 是实体表格视图布局样式标识名称，`VIEWLAYOUTPANEL` 、 `APPDEGRIDVIEW` 于IBizSys 模型预置，`_pluginsfront` 属于附加的扩展标识名称，三者组成了完整的扩展标识名称。
+`CTRLTYPE` 是部件类型，`VIEWLAYOUTPANEL#APPDEGRIDVIEW` 是实体表格视图布局样式标识名称，`VIEWLAYOUTPANEL` 、 `APPDEGRIDVIEW` 于 iBiz 模型预置，`_pluginsfront` 属于附加的扩展标识名称，三者组成了完整的扩展标识名称。
 
 
 名称替换的扩展方式如下：
@@ -65,7 +65,7 @@ CTRLTYPE=VIEWLAYOUTPANEL#APPDEGRIDVIEW_pluginsfront
 CTRLTYPE=VIEWLAYOUTPANEL#pluginsfront
 ```
 
-`CTRLTYPE` 是部件类型，`VIEWLAYOUTPANEL#pluginsfront` 是实体表格视图布局样式标识名称，`VIEWLAYOUTPANEL` 于IBizSys 模型预置，`_pluginsfront` 属于替换的扩展标识名称，二者组成了完整的扩展标识名称。
+`CTRLTYPE` 是部件类型，`VIEWLAYOUTPANEL#pluginsfront` 是实体表格视图布局样式标识名称，`VIEWLAYOUTPANEL` 于 iBiz 模型预置，`_pluginsfront` 属于替换的扩展标识名称，二者组成了完整的扩展标识名称。
 
 
 

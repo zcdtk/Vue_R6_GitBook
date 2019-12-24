@@ -3,7 +3,7 @@
 
 逻辑主要作用是构建应用的交互操作，从事件触发，到数据请求、页面展示，都属于逻辑的一部分。
 
-IBizSys 模型预置逻辑丰富了应用的交互操作，通过配置化导向，解析业务模型，发布业务处理过程。
+iBiz 模型预置逻辑丰富了应用的交互操作，通过配置化导向，解析业务模型，发布业务处理过程。
 
 <blockquote style="border-color: #2892ec;background-color: #f0faff;">
     <p>
@@ -427,7 +427,7 @@ if (_this.${nextPSUIAction.getFullCodeName()} && _this.${nextPSUIAction.getFullC
 LOGICTYPE=FRONT
 ```
 
-`LOGICTYPE` 是逻辑类型，`FRONT` 是逻辑标识名称，属于 IBizSys 模型预置。
+`LOGICTYPE` 是逻辑类型，`FRONT` 是逻辑标识名称，属于 iBiz 模型预置。
 
 
 # 构成内容

@@ -166,7 +166,7 @@ public render() {
 
 ## 部件成员
 
-CONTROL.tsx#COLUMN.ftl 在 `CONTROL.tsx` 后以 `#` 开始命令的文件，属于部件成员，该出演的类型在 IBizSys 模型中已经预置，可以直接声明使用。
+CONTROL.tsx#COLUMN.ftl 在 `CONTROL.tsx` 后以 `#` 开始命令的文件，属于部件成员，该出演的类型在 iBiz 模型中已经预置，可以直接声明使用。
 
 成员是部件逻辑或者部件内容的组成单元，通过获取部件成员模型，可以输出对应的部件逻辑或者内容。
 
@@ -177,7 +177,7 @@ template.properties
 ```freemarker
 CTRLTYPE=GRID
 ```
-`CTRLTYPE` 是部件类型，`GRID` 是部件标识名称，属于 IBizSys 模型预置。
+`CTRLTYPE` 是部件类型，`GRID` 是部件标识名称，属于 iBiz 模型预置。
 
 
 # 构成内容
